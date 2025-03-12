@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suwarna Pyakurel | Undergraduate Engineer</title>
+  <meta name="description" content="Portfolio of Suwarna Pyakurel, an undergraduate engineer specializing in space robotics, astronomy, and technology.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body class="dark-mode">
+  <!-- Animated Background -->
+  <canvas id="animated-background"></canvas>
+  
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <!-- Header/Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">Suwarna Pyakurel</a>
+      <nav class="desktop-nav">
+        <button class="nav-link" data-scroll-to="about">About</button>
+        <button class="nav-link" data-scroll-to="skills">Skills</button>
+        <button class="nav-link" data-scroll-to="projects">Projects</button>
+        <button class="nav-link" data-scroll-to="experience">Experience</button>
+        <button class="nav-link" data-scroll-to="contact">Contact</button>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun light-icon"></i>
+          <i class="fas fa-moon dark-icon"></i>
+        </button>
+        <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/suwarnapyakurel/" target="_blank" rel="noopener noreferrer" class="icon-button" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-header">
+      <button id="mobile-menu-close" aria-label="Close mobile menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <button class="mobile-nav-link" data-scroll-to="about">About</button>
+      <button class="mobile-nav-link" data-scroll-to="skills">Skills</button>
+      <button class="mobile-nav-link" data-scroll-to="projects">Projects</button>
+      <button class="mobile-nav-link" data-scroll-to="experience">Experience</button>
+      <button class="mobile-nav-link" data-scroll-to="contact">Contact</button>
+    </nav>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+          <h1 class="hero-title">
+            <span class="text-primary">Hello, I'm Suwarna</span>
+            <br>
+            <span id="typing-effect"></span>
+          </h1>
+          <p class="hero-description">
+            Passionate about space robotics, web development, and machine learning. Merging technology with the mysteries of space.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="button button-primary button-animated">
+              <span>Get in Touch</span>
+              <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+            <a href="assets/Suwarna_Pyakurel_Resume.pdf" download id="download-resume" class="button button-outline button-animated">
+              <i class="fas fa-download button-icon"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+          <div class="image-carousel-container">
+            <div class="image-carousel" id="image-carousel">
+              <!-- Images will be added via JavaScript -->
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-arrow prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="carousel-dots" id="carousel-dots">
+                <!-- Dots will be added via JavaScript -->
+              </div>
+              <button class="carousel-arrow next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-cards" data-aos="fade-up">
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Biratnagar, Koshi Province, Nepal</span>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <span>9840036060</span>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>suwarnapyakurel5@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>My journey, passion, and vision</p>
+      </div>
+      <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+        <p>
+          I'm an enthusiastic space-robotics learner, currently pursuing an undergraduate degree in Electronics,
+          Communication, and Information Engineering. As a proud member of the Nepal Astronomical Society (NASO), I'm
+          driven to merge technology with the mysteries of space.
+        </p>
+        <p>
+          I've completed numerous robotics projects and am currently mastering the Robot Operating System (ROS). With
+          experience in web scraping, I'm now diving into Django to pursue backend development to connect my projects
+          and research with the web. My journey also includes exploring open-source projects, reflecting my commitment
+          to collaborative innovation.
+        </p>
+        <p>
+          I advocate for diversity and women in tech as a local volunteer, striving to inspire and create inclusive
+          opportunities. With experience in scripting with Python, and team leadership, I constantly explore practical
+          technologies to address real-world challenges.
+        </p>
+        <p class="highlight">Let's connect and embark on this exciting journey together!</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <h2>My Skills</h2>
+        <p>Technologies and domains I specialize in</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Robotics & IoT</h3>
+          <p>Cutting-edge robotic solutions and Internet of Things applications developed at a professional level.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Frontend development and web scraping techniques for data extraction and analysis.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Astronomy & Space Science</h3>
+          <p>Engaging in astronomical outreach, pioneering space robotics research, and tackling innovative space apps challenges.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Python Programming</h3>
+          <p>Developing advanced scripts, solutions and applications using Python, OpenCV, and machine learning.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3>C and C++</h3>
+          <p>Implementing OOPs concepts with strong foundational knowledge in C and C++ programming.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-icon">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>Version control and collaborative development using Git and GitHub platforms.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="skill-icon">
+            <i class="fab fa-linux"></i>
+          </div>
+          <h3>Linux</h3>
+          <p>Working with Linux operating systems for development and system administration.</p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="skill-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Event Management</h3>
+          <p>Organizing and managing technical events, workshops, and community outreach programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <h2>Featured Projects</h2>
+        <p>Some of my recent work and contributions</p>
+      </div>
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-button active" data-filter="all">All Projects</button>
+        <button class="filter-button" data-filter="Data Structures">Data Structures</button>
+        <button class="filter-button" data-filter="C Programming">C Programming</button>
+        <button class="filter-button" data-filter="C++">C++</button>
+        <button class="filter-button" data-filter="IoT">IoT</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Projects will be added via JavaScript -->
+      </div>
+      <div class="projects-more" data-aos="fade-up">
+        <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer" class="button button-outline button-animated">
+          <i class="fab fa-github button-icon"></i>
+          <span>View More on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience & Education Section -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <h2>Experience & Education</h2>
+        <p>My professional journey and academic background</p>
+      </div>
+      <div class="tabs" data-aos="fade-up">
+        <div class="tabs-header">
+          <button class="tab-button active" data-tab="experience">Experience</button>
+          <button class="tab-button" data-tab="education">Education</button>
+        </div>
+        <div class="tabs-content">
+          <div class="tab-pane active" id="experience-tab">
+            <div class="timeline">
+              <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>CS50 AI Nepal, EXCESS</h3>
+                    <span class="badge">Oct 2024 - Present</span>
+                  </div>
+                  <p class="timeline-role">PR and Outreach Lead</p>
+                  <p class="timeline-description">
+                    CS50 AI Nepal, inspired by Harvard University's renowned "CS50 Introduction to Artificial Intelligence with Python" course, is pioneering AI education in Nepal. It introduces students to cutting-edge AI concepts like machine learning, neural networks, and natural language processing through hands-on projects. As the PR and Outreach Lead, I craft compelling narratives, manage media relations, and engage with diverse communities to raise awareness about AI education. My goal is to grow our network, spark conversations, and make a meaningful impact in the tech ecosystem.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Nepal Astronomical Society (NASO)</h3>
+                    <span class="badge">Oct 2023 - Present</span>
+                  </div>
+                  <p class="timeline-role">Undergraduate Student Member</p>
+                  <p class="timeline-description">
+                    I'm an advocate for innovation, blending technical expertise with a deep enthusiasm for astronomy and AI. As a NASO Undergraduate Student Member and a keen Space Robotics learner, I am currently mastering the Robot Operating System (ROS). I have organized and led various initiatives including the NASA International Space Apps Challenge in Koshi Province, and have worked closely with local and provincial governments to enhance technical education. I served as Country Guide and Tech Lead for IOAA-Jr. 2024, developing a QR-based system for participant tracking.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="150">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Robotics Club, IOEPC</h3>
+                    <span class="badge">2023 - Present</span>
+                  </div>
+                  <p class="timeline-role">Executive and General Member</p>
+                  <p class="timeline-description">
+                    As an executive and general member of the Robotics Club, I actively worked on various projects. A major highlight was winning the International Robotics Competition Yantra 9.0, where we won the Yantra Business Cup Expo. This competition tested and refined our problem-solving and entrepreneurship skills, showcasing our ability to innovate and succeed in a competitive environment.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Astronomy and Space Science Study Research Committee</h3>
+                    <span class="badge">Jun 2023 - Present</span>
+                  </div>
+                  <p class="timeline-role">Executive Member</p>
+                  <p class="timeline-description">
+                    Serving as an Executive Member, I worked closely with local and provincial governments to promote astronomy and space science through community outreach and technical workshops. My work involved fostering a deeper understanding of technical education in Koshi Province and directly influencing the drafting of effective plans and policies.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="250">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Koshi Mini Yantra 2.0</h3>
+                    <span class="badge">Jan 28-29, 2023</span>
+                  </div>
+                  <p class="timeline-role">Outreach Coordinator</p>
+                  <p class="timeline-description">
+                    In the organizing committee of Koshi Mini Yantra 2.0, I served as an Outreach Coordinator, effectively showcasing my ability to lead process-oriented planning. This role involved strategic coordination and execution of events, enhancing my organizational and communication skills.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Municipal Child Club Network, Biratnagar</h3>
+                    <span class="badge">2019 - 2024</span>
+                  </div>
+                  <p class="timeline-role">Secretary (2019-2021) & Advisor (2023-2024)</p>
+                  <p class="timeline-description">
+                    As the Secretary of the Municipal Child Club Network in Biratnagar, the second-largest city in Nepal, I coordinated numerous initiatives aimed at youth engagement and development. This role honed my organizational and communication skills. Later, as an Advisor, I continued to support and guide the community, ensuring the sustainability and growth of youth-focused initiatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="education-tab">
+            <div class="timeline">
+              <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Tribhuwan University, Institute of Engineering, Purwanchal Campus</h3>
+                    <span class="badge">2023 - Present</span>
+                  </div>
+                  <p class="timeline-role">Bachelor of Engineering in Electronics, Communication, and Information Engineering</p>
+                  <p class="timeline-description">
+                    Focusing on robotics, space technology, and software development. Active member of the campus robotics club and participating in various technical competitions.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>SOS Hermann Gmeiner Secondary School</h3>
+                    <span class="badge">2020 - 2022</span>
+                  </div>
+                  <p class="timeline-role">High School - Physics, Chemistry, Mathematics, Biology, English</p>
+                  <p class="timeline-description">
+                    Served as Head-boy (batch: 2078 BS). Participated in STEM and various voluntary activities. Contributed to the provisional discovery of main belt asteroid '2020 WX9'.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h3>Shree Pokhariya Secondary School</h3>
+                    <span class="badge">2018 - 2020</span>
+                  </div>
+                  <p class="timeline-role">Secondary Level - Science, Mathematics, English, Computer Science</p>
+                  <p class="timeline-description">
+                    Built a strong foundation in science and technology subjects. Participated in various science exhibitions and competitions at the district level.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <h2>Get In Touch</h2>
+        <p>Have a question or want to work together? Feel free to contact me.</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Contact Information</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>suwarnapyakurel5@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>9840036060</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Biratnagar, Koshi Province, Nepal</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer" class="social-button" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/suwarnapyakurel/" target="_blank" rel="noopener noreferrer" class="social-button" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-container" data-aos="fade-left">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <div class="error-message" id="name-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
+              <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+              <div class="error-message" id="message-error"></div>
+            </div>
+            <button type="submit" class="button button-primary button-animated submit-button">
+              <span id="submit-text">Send Message</span>
+              <i class="fas fa-paper-plane button-icon"></i>
+              <span id="submit-loading" class="hidden">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2025 Suwarna Pyakurel. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://github.com/suwarna-wave" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/suwarnapyakurel/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <i id="toast-icon" class="fas"></i>
+      <div class="toast-message">
+        <h4 id="toast-title"></h4>
+        <p id="toast-description"></p>
+      </div>
+    </div>
+    <button id="toast-close" class="toast-close" aria-label="Close notification">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/background.js"></script>
+  <script src="js/typing-effect.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
